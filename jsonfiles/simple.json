@@ -1,0 +1,38 @@
+{
+    "environment_names": ["LunarLanderContinuous-v2"],
+    "numEvalEpisodes": 1,
+    "numTrainEpisodes": 50,
+    "evalEverySteps": 10,
+    "maxTotalSamples": 2000000,
+    "warmUpSteps": 100,
+	"bufferSize":100000,
+    "batchSize":32,
+  "LunarLanderContinuous-v2":{
+      "EpisodeSamples": 10000,
+    "numTrainEpisodes": 2000,
+    "stateBounded": false,
+      "numEvalEpisodes": 1
+    },
+   "BipedalWalker-v2":{
+      "EpisodeSamples": 10000,
+    "stateBounded": false
+    },
+    "agent_names": ["WireFitting"],
+    "WireFitting":{
+    "saveModel": true,
+    "useSavedModel": false,
+    "notTrain": false,
+    "modelPath": "none/nnmodel.ckpt",
+    "sweeps": {
+      "epsilon": [0.1],
+      "epsilonDecay": [1.0],
+      "epsilonMin":[0.01],
+        "alpha":[0.0001],
+        "numControllers":[50],
+        "tau":[0.001],
+        "gamma": [0.99],
+        "n_h1":[200],
+        "n_h2":[200]
+    }
+    }
+}
